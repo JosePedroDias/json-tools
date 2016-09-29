@@ -1,12 +1,24 @@
 # JSON-TOOLS
 
-Simple tools for simple tasks!
+## Executive Summary
 
-Check the [demo](#).
+Simple tools for simple tasks, in plain old JS.
+
+Check the [demo](https://josepedrodias.github.io/json-tools/).
 
 
 
-## jsonKeys
+## Public API
+
+### TOC
+
+* [jsonKeys(o : Object) : Array<string>](#jsonkeys)
+* [jsonDiff(oA : Object, oB : Object) : {onlyA : Object, onlyB : Object, valuesDiffer : Object}](#jsondiff)
+* [json2js(o : Object) : string](#json2js)
+
+
+
+### jsonKeys
 
 API is:
 
@@ -50,7 +62,7 @@ jsonKeys({
 ```
 
 
-## jsonDiff
+### jsonDiff
 
 API is:
 
@@ -82,7 +94,7 @@ jsonDiff(A, B);
 Note: for the moment object keys order depend on the JS engine used.
 
 
-## json2js
+### json2js
 
 API is:
 
