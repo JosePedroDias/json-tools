@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JSON-TOOLS</title>
+    <link rel="stylesheet" href="demo.css">
+  </head>
+  <body>
+    <h1>JSON-TOOLS</h1>
+    A:<br/>
+    <textarea id="taA">
+{
+	"req": {
+		"method": "GET",
+		"url": "https://store.com/navigation/f61b4105-9015-42a9-af2b-89a693f8c21d",
+		"headers": {
+			"user-agent": "node-superagent/2.2.0",
+			"accept": "application/json"
+		}
+	},
+	"header": {
+		"cache-control": "no-cache",
+		"content-type": "application/json; charset=utf-8",
+		"date": "Thu, 29 Sep 2016 09:16:25 GMT",
+		"content-length": "43"
+	},
+	"status": 404,
+	"text": "{\r\n  \"meta\": {\r\n    \"httpCode\": 404\r\n  }\r\n}"
+}
+    </textarea><br/><br/>
+    B:<br/>
+    <textarea id="taB">
+{
+	"req": {
+		"method": "PUT",
+		"url": "https://store.com/navigation/111b4105-9015-42a9-af2b-89a693f8cddd",
+		"headers": {
+			"user-agent": "node-superagent/2.2.0",
+			"accept": "application/json"
+		}
+	},
+	"header": {
+		"date": "Thu, 29 Sep 2016 09:16:30 GMT",
+        "X-Hello": 42
+	},
+	"status": 404,
+	"text": "{\r\n  \"meta\": {\r\n    \"httpCode\": 404\r\n  }\r\n}"
+}
+    </textarea><br/><br/>
+    <div id="buttons">
+      <button id="bka">keys of A</button>
+      <button id="bkb">keys of B</button><br/>
+      <button id="bdab">diff A/B</button>
+      <button id="bj2j">json2js A</button>
+    </div>
+    <pre id="p"></pre>
+
+    <script src="json-tools.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>
